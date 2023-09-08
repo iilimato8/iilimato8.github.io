@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Albert Sans", "Albert Sans Placeholder", sans-serif;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -77,20 +78,11 @@ body {
 /* clock */
 .card .right div:nth-child(3) { 
   position: relative;
+  justify-content: center;
+  align-items: center;
   height: 45px;
   width: 100%;
   border-radius: 15px;
-}
-.card .right div:nth-child(3)::before {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.8rem;
-  position: absolute;
-  content: "12:00";
-  height: 100%;
-  width: 100%;
-  background: url(clock.png);
-  background-size: cover;
-  background-position: center;
+  font-weight: 700;
 }
