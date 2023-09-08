@@ -18,14 +18,21 @@ body {
   border: 1px solid rgba(0, 181, 213, 0.125);
   border-radius: 10px;
   background-color: rgb(243, 252, 255);
-  gap: 10px;
-  --margin-up-down: 10px;
-  --margin-left-right: 20px;
+  gap: 35px;
+  --margin-up-down: 20px;
+  --margin-left-right: 45px;
 }
 .card .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin: var(--margin-up-down) 0 var(--margin-up-down) var(--margin-left-right);
 }
 .card .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70px;
   margin: var(--margin-up-down) var(--margin-left-right) var(--margin-up-down) 0;
 }
 .card .schedule {
@@ -33,19 +40,57 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
+}
+.card .schedule div {
+  white-space: nowrap;
 }
 .card .left .img {
   position: relative;
-  height: 110px;
+  height: 60px;
   width: 150px;
 }
 .card .left .img::before {
   position: absolute;
-  content: "wwwww";
+  content: "";
+  height: 120px;
+  width: 180px;
+  background: url(webpic.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* weather */
+.card .right div:nth-child(1) { 
+  height: 70px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgb(80, 80, 80);
+}
+/* switch */
+.card .right div:nth-child(2) { 
+  height: 35px;
+  width: 100%;
+  border-radius: 100px;
+  background-color: rgb(33, 33, 33);
+}
+/* clock */
+.card .right div:nth-child(3) { 
+  position: relative;
+  height: 45px;
+  width: 100%;
+  border-radius: 15px;
+}
+.card .right div:nth-child(3)::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  position: absolute;
+  content: "12:00";
   height: 100%;
   width: 100%;
-  background: url(webpic.png);
+  background: url(clock.png);
   background-size: cover;
   background-position: center;
 }
