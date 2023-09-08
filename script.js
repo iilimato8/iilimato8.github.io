@@ -6,6 +6,4 @@ function updateTime() {
   
   document.getElementById('clock').innerText = timeString;
 }
-
-// 更新時間每一秒
 setInterval(updateTime, 1000);
