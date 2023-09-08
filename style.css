@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 200px;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(0, 181, 213, 0.125);
+  border-radius: 10px;
+  background-color: rgb(243, 252, 255);
+  gap: 10px;
+  --margin-up-down: 10px;
+  --margin-left-right: 20px;
+}
+.card .left {
+  margin: var(--margin-up-down) 0 var(--margin-up-down) var(--margin-left-right);
+}
+.card .right {
+  margin: var(--margin-up-down) var(--margin-left-right) var(--margin-up-down) 0;
+}
+.card .schedule {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.card .left .img {
+  position: relative;
+  height: 110px;
+  width: 150px;
+}
+.card .left .img::before {
+  position: absolute;
+  content: "wwwww";
+  height: 100%;
+  width: 100%;
+  background: url(webpic.png);
+  background-size: cover;
+  background-position: center;
+}
